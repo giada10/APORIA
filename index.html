@@ -21,3 +21,45 @@ addEventListener('hashchange',route);route();
 const check=document.getElementById('demo'),saved=document.getElementById('saved');try{check.checked=localStorage.getItem('aporia-demo')==='1'}catch(e){}
 function render(){saved.textContent=check.checked?'Preferenza di prova memorizzata in questo browser.':'Nessuna preferenza di prova selezionata.'}check.addEventListener('change',()=>{try{localStorage.setItem('aporia-demo',check.checked?'1':'0')}catch(e){}render()});render();
 </script></body></html>
+<!-- APORIA — TIMBRO KITCHEN, VARIANTE A APPROVATA -->
+<!-- INCOLLARE QUESTO BLOCCO IMMEDIATAMENTE PRIMA DI </body> NEL FILE index.html -->
+<style>
+  .aporia-kitchen-stamp-wrap { max-width: 350px; margin: 28px auto; text-align: center; }
+  .aporia-kitchen-stamp-wrap svg { display: block; width: 100%; height: auto; }
+  .aporia-kitchen-stamp-caption { font: 600 11px 'DM Sans',Arial,sans-serif; letter-spacing: .12em; color: #69715a; text-transform: uppercase; margin-top: 8px; }
+</style>
+<template id="aporia-kitchen-stamp-template">
+  <aside class="aporia-kitchen-stamp-wrap" aria-label="Timbro letterario Kitchen">
+    <svg viewBox="0 0 350 340" role="img" aria-label="Timbro APORIA, romanzo breve, finestra con lampada, tazza e pianta, Kitchen, Banana Yoshimoto">
+      <g fill="none" stroke="#69715a" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="148" cy="168" r="137" stroke-width="3"/>
+        <circle cx="148" cy="168" r="128" stroke-width="1.4"/>
+        <circle cx="148" cy="168" r="99" stroke-width="1"/>
+        <path d="M262 125 Q300 111 345 125 M262 139 Q300 125 345 139 M262 153 Q300 139 345 153 M262 167 Q300 153 345 167" stroke-width="2.5"/>
+        <path d="M108 117 H188 V210 H108 Z M148 117 V210 M108 162 H188 M101 213 H195" stroke-width="2"/>
+        <path d="M160 117 V132 M151 140 H169 L166 132 H154 Z" stroke-width="1.8"/>
+        <path d="M117 191 H140 V197 Q129 208 117 197 Z M140 193 Q151 192 145 201 M114 208 H144 M121 184 Q115 179 121 174 M131 184 Q125 179 131 174" stroke-width="1.6"/>
+        <path d="M164 203 H183 L179 211 H168 Z M173 203 V174 M173 188 Q158 181 162 176 Q173 175 173 188 M173 181 Q188 172 185 169 Q173 169 173 181" stroke-width="1.7"/>
+      </g>
+      <g fill="#69715a" font-family="DM Sans,Arial,sans-serif" text-anchor="middle">
+        <text x="148" y="60" font-size="23" font-weight="700" letter-spacing="4">APORIA</text>
+        <text x="148" y="93" font-size="11" font-weight="600" letter-spacing="1.3">ROMANZO BREVE</text>
+        <text x="148" y="254" font-size="21" font-weight="700" letter-spacing="2">KITCHEN</text>
+        <text x="148" y="275" font-size="11" font-weight="600" letter-spacing="1">BANANA YOSHIMOTO</text>
+      </g>
+    </svg>
+    <div class="aporia-kitchen-stamp-caption">TIMBRO LETTERARIO · 001</div>
+  </aside>
+</template>
+<script>
+(function () {
+  const page = document.getElementById('kitchen');
+  const template = document.getElementById('aporia-kitchen-stamp-template');
+  if (!page || !template || page.querySelector('.aporia-kitchen-stamp-wrap')) return;
+  const stamp = template.content.firstElementChild.cloneNode(true);
+  const layout = page.querySelector('.book-layout');
+  if (layout) layout.insertAdjacentElement('afterend', stamp);
+  else page.appendChild(stamp);
+})();
+</script>
+<!-- FINE TIMBRO APORIA -->
