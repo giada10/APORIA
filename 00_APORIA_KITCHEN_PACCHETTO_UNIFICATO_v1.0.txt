@@ -1,288 +1,45 @@
-APORIA — CLUB DEL LIBRO
-LIBRO 001 — KITCHEN · BANANA YOSHIMOTO
-CONSOLIDAMENTO DELLE DECISIONI DELLA CHAT LIBRO
-Versione pacchetto: 1.0 — 16 novembre 2026
-STATO GENERALE: DOCUMENTAZIONE DI PROGETTO, NON PRONTA PER PUBBLICAZIONE
+APORIA — KITCHEN — TAPPA 01
+PACCHETTO TECNICO DI VALUTAZIONE v1.1 — 16 NOVEMBRE 2026
 
-AVVERTENZA
-Questo documento registra quanto deliberato finora e fornisce indicazioni per una FUTURA integrazione nella versione ufficiale del sito APORIA.
-NON costituisce autorizzazione a modificare o pubblicare il sito.
-Non sostituisce il PROTOCOLLO MASTER — LIBRI APORIA v1.0 né il riferimento grafico ufficiale.
-Gli stati indicati si riferiscono alle singole decisioni, NON all'intero libro.
+STATO: PROVVISORIO — NON PRONTO PER PUBBLICAZIONE — NON PUBBLICATO
 
-00 — PACCHETTO UNIFICATO PER LA CHAT CENTRALE
+INPUT VERIFICATI
+- Testo incollato.txt: versione HTML più recente fornita dall'autrice, comprensiva di HOME, agenda, gestione delle schede libri, dossier, benvenuto, atlante e passaporto.
+- Testo incollato (2).txt: consolidamento delle approvazioni di Kitchen v1.0.
+- APORIA_KITCHEN_TAPPA_01_ANTEPRIMA_v1.html: prototipo di test da cui sono tratti i soli componenti della tappa.
 
-USO CONSIGLIATO
-Per trasferire tutto in un solo file, caricare QUESTO TXT nella chat centrale APORIA.
-In alternativa caricare i quattro file modulari numerati 01–04.
-Non usare la versione HTML di anteprima come sostituzione del sito.
-Non sostituire il PROTOCOLLO MASTER e non sovrascrivere la versione grafica ufficiale.
-Conflitti con documentazione precedente: le approvazioni esplicite successive qui riportate aggiornano lo stato iniziale del Master, senza modificare il Master stesso.
+RISULTATO
+- APORIA_KITCHEN_TAPPA_01_INTEGRATA_VALUTAZIONE_v1.1.html: copia completa della versione HTML fornita dall'autrice, con UNA SOLA sezione di contenuto sostituita (#tappa-01), foglio di stile aggiuntivo limitato a #tappa-01 e script specifico della tappa. Non è stato modificato il repository né la pubblicazione.
+- Il resto del file HTML di partenza è conservato, inclusi HOME, agenda, archivio, navigazione, timbro e passaporto.
+- Il codice delle attività non richiede trascinamento né mostra risposte giuste/sbagliate.
+- L'attività 02 sblocca l'ultima fase e conclude in modo esplicito; al completamento della lettura e di entrambe le attività, la tappa è marcata completata NELL'ANTEPRIMA.
+- La tappa 02 non è stata implementata né sbloccata pubblicamente. Nessun timbro assegnato.
 
-INDICE
-01. Registro approvazioni e stato dell'opera
-02. Schede contenuti Tappa 01
-03. Specifiche future di integrazione
-04. Checklist + messaggio da trasferire
+PROVA LOCALE
+1. Aprire il file .html nel browser.
+2. Scegliere ITINERARI > KITCHEN > BENVENUTO > ATLANTE > TAPPA 01 oppure aggiungere #tappa-01 alla fine del percorso del file nella barra indirizzi.
+3. Spuntare la conferma di lettura.
+4. Scegliere un primo gesto nella Stanza delle scelte, leggere il feedback, scegliere una prospettiva e concludere l'attività.
+5. Creare due tessere libere (terza facoltativa), collocarle scegliendo una delle tre posizioni, riconsiderarle, e selezionare CONCLUDI L'ATTIVITÀ.
+6. Ricaricare e verificare la consultazione in sola lettura delle tessere concluse.
+Nota: aprendo in file:// l'agenda può risultare non disponibile perché il file originale richiede il JSON esterno agenda.json tramite fetch. In hosting corretto la disponibilità dipende dal file agenda.json servito dal sito; questa integrazione NON interviene sull'agenda.
 
+DIFFERENZE CONSENTITE RISPETTO AL PROTOTIPO
+- Rimossa l'azione di reset dimostrativa, non approvata per la versione reale.
+- Nessun redirect automatico da HOME alla tappa.
+- Chiave del salvataggio di test autonoma (aporia.preview.kitchen.tappa01.integrata.v1).
+- Titolo e vincolo della conclusione A1 lasciati in stato APPROVATA CON RISERVA.
+- Testi intermedi/feedback e CSS locali di anteprima sono PROVVISORI.
 
-========================================================================
-ORIGINE MODULO: 01_APORIA_KITCHEN_REGISTRO_APPROVAZIONI_v1.0.txt
-========================================================================
+NON FARE
+- NON sostituire il file index.html della branch che pubblica GitHub Pages senza autorizzazione esplicita e senza completare il gate editoriale.
+- NON caricare il file di anteprima su main come se fosse la versione definitiva.
+- NON usare il file TXT delle approvazioni come se fosse HTML eseguibile.
+- NON inventare pagine dell'edizione 2025 o sbloccare il timbro.
 
-01 — REGISTRO DECISIONI E STATO DELL'OPERA
-
-IDENTIFICAZIONE
-[APPROVATA] Codice LIBRO 001; Kitchen di Banana Yoshimoto.
-[APPROVATA] Edizione di riferimento: Feltrinelli, collana Liberitutti, 2025; ISBN 9788807848605. Traduzione di Giorgio Amitrano indicata nel prototipo grafico di riferimento; dato bibliografico da controllare prima della pubblicazione.
-[APPROVATA] Lettura limitata esclusivamente al primo racconto «Kitchen»; esclusi «Luna piena (Kitchen 2)» e «Moonlight Shadow».
-[APPROVATA] Tre tappe costruite su snodi narrativi, non suddivisioni meccaniche.
-[APPROVATA] Temi: Solitudine, Appartenenza, Famiglia, Identità, Perdita, Rinascita.
-[APPROVATA] Domanda centrale: «CHE COSA RENDE UN LUOGO, O UNA PERSONA, CASA?».
-[APPROVATA] La domanda centrale è riservata, per la dinamica delle attività, alla conclusione dell'intero itinerario: non deve fungere da chiusura dell'Attività 01 né dell'Attività 02. La presenza già approvata della domanda nel dossier del libro non è oggetto di modifica in questa chat; un'eventuale diversa regola di visibilità nel dossier va chiarita prima di intervenire.
-[APPROVATA] Navigazione guidata C; Benvenuto B; Atlante letterario B; prima attività introduttiva che sblocca le altre; attività successive selezionabili liberamente nei percorsi con più opzioni.
-[APPROVATA] Conservazione del timbro e delle altre scelte generali già previste nel protocollo e nel progetto grafico; nessun intervento autonomo.
-
-TAPPE — QUADRO DI INSIEME
-[APPROVATA] Numero di tappe: 3.
-[PROVVISORIO] Titoli: Tappa 01 «Un nuovo spazio»; Tappa 02 «Abitare i legami»; Tappa 03 «Oltre la soglia».
-[APPROVATA CON RISERVA DI REVISIONE] Primo confine: dopo l'arrivo di Mikage dai Tanabe e la prima conoscenza dell'ambiente domestico, inclusa Eriko.
-[APPROVATA CON RISERVA DI REVISIONE] Secondo confine: fine della prima fase di convivenza, quando cambia la situazione domestica.
-[DA CHIARIRE] Paragrafi, snodi esatti e numeri di pagina nella Feltrinelli Liberitutti 2025. Nessun riferimento numerico approvato.
-
-TAPPA 01 — DECISIONI APPROVATE
-[APPROVATA] Due attività, e soltanto queste due: (01) «La stanza delle scelte»; (02) «Il confine invisibile». «Il mistero della casa» NON viene inserito nella Tappa 01.
-[APPROVATA] Conferma esplicita della porzione letta prima delle attività.
-[APPROVATA] Attività 01 introduttiva obbligatoria; il suo completamento sblocca l'Attività 02.
-[APPROVATA] Attività 01: esperienza simbolica nella stanza sconosciuta; scelta iniziale, feedback non giudicante, ritorno interpretativo a Kitchen e conclusione.
-[APPROVATA CON RISERVA DI REVISIONE] Conclusione dell'Attività 01, testo integrale v1.1 riportato nel file contenuti.
-[APPROVATA] Attività 02: il lettore CREA autonomamente le tessere individuando nel racconto gesti/incontri/luoghi/dettagli. Non fornire tessere narrative preimpostate.
-[APPROVATA] Due tessere obbligatorie, terza facoltativa.
-[APPROVATA] Visualizzazione «Linea del confine», con TRE POSIZIONI DEFINITE: ESTRANEITÀ / SULLA SOGLIA / APPARTENENZA. Niente valori intermedi.
-[APPROVATA] Posizionamento tramite selezione (NON trascinamento).
-[APPROVATA] Motivazione della posizione facoltativa per ogni tessera.
-[APPROVATA] Fase finale: domanda riflessiva; possibilità di cambiare o mantenere le posizioni; riflessione scritta facoltativa; nessuna spiegazione morale conclusiva.
-[APPROVATA] Le tessere e le riflessioni dell'Attività 02 restano consultabili in sola lettura dopo «CONCLUDI L'ATTIVITÀ».
-[APPROVATA] «CONCLUDI L'ATTIVITÀ» per l'Attività 02: completamento esplicito; salvataggio delle posizioni finali.
-[APPROVATA] Tappa 01 completata AUTOMATICAMENTE quando lettura confermata e entrambe le attività completate; non aggiungere un pulsante di conferma della tappa. Dopo il completamento, requisito per sbloccare Tappa 02 soddisfatto.
-[APPROVATA] Persistenza locale nel browser nella prima versione senza account; non attribuire timbri con il completamento della sola Tappa 01.
-
-ELEMENTI NON ANCORA DEFINITIVI
-[PROVVISORIO] Titolo «Un nuovo spazio»; introduzioni operative, formulazioni delle opzioni e dei feedback della prima attività, eventuali placeholder, microtesti di pulsanti e dettagli di impaginazione.
-[PROVVISORIO] Modalità esatta di visualizzazione della linea e delle tessere nel CSS/HTML ufficiale, da adeguare SENZA alterare la grafica approvata.
-[PROVVISORIO] Modalità finale di congelamento/consultazione delle risposte dell'Attività 01: l'anteprima prevede sola lettura, ma la decisione specifica di sola lettura è stata espressa in chat per le tessere dell'Attività 02.
-[DA CHIARIRE] Verifica filologica e anti-spoiler, indicazione puntuale della porzione di lettura, test di accessibilità e persistenza nel sito reale.
-[DA CHIARIRE] Specifiche definitive della Tappa 02, Tappa 03, requisiti complessivi dell'itinerario e autorizzazione PRONTO PER PUBBLICAZIONE.
-
-CRONOLOGIA E FONTI
-Versione di consolidamento: v1.0, 16 novembre 2026.
-Le approvazioni derivano dalle conferme esplicite nella conversazione «APORIA — LIBRO 001 — KITCHEN»; non si attribuisce un giorno puntuale non documentato a ciascuna singola decisione.
-Documenti di riferimento:
-- 01_PROTOCOLLO_MASTER_APORIA.txt (v1.0, 15/11/2026), particolarmente sezioni 2, 3, 7, 8, 11–16.
-- 02_SITO_APORIA_GRAFICA_APPROVATA.html / .txt (riferimento grafico del progetto disponibile).
-- APORIA_KITCHEN_TAPPA_01_ANTEPRIMA_v1.html (PROTOTIPO di valutazione, non fonte di nuove approvazioni).
-Il protocollo descrive le tre proposte di prima attività come ancora aperte nel suo stato iniziale: tale stato è stato superato dalle successive approvazioni esplicite della presente chat.
-
-
-========================================================================
-ORIGINE MODULO: 02_APORIA_KITCHEN_TAPPA_01_CONTENUTI_v1.0.txt
-========================================================================
-
-02 — SCHEDE CONTENUTI DELLA TAPPA 01
-
-CONTESTO
-[PROVVISORIO] Titolo Tappa 01: «Un nuovo spazio».
-[APPROVATA CON RISERVA DI REVISIONE] Perimetro di lettura descrittivo: dall'inizio del primo racconto «Kitchen» fino all'arrivo di Mikage nella casa dei Tanabe e alla conoscenza del loro ambiente domestico, compresa Eriko.
-[DA CHIARIRE] Indicazione di pagina/testo sull'edizione Feltrinelli Liberitutti 2025: NON DEFINITA. Non pubblicare la descrizione narrativa come se fosse un confine testuale definitivo.
-[APPROVATA] Prima del gioco il lettore deve confermare esplicitamente di aver letto la porzione prevista.
-[PROVVISORIO] Etichetta possibile: «CONFERMO DI AVER LETTO LA PORZIONE INDICATA»; wording ancora da approvare.
-
-ATTIVITÀ 01 — LA STANZA DELLE SCELTE
-[APPROVATA] Formato, ordine e scopo: piccolo gioco narrativo simbolico; il lettore non impersona Mikage e non modifica la trama. Il gioco è un'introduzione ai temi della solitudine e dell'appartenenza e non è un quiz.
-
-FASE 1 — ENTRARE NELLA STANZA
-[APPROVATA] Meccanismo: situazione simbolica; scelta del primo gesto; feedback differente a seconda della scelta, senza punteggio e senza valutazione giusto/sbagliato.
-[PROVVISORIO] Testo introduttivo mostrato nell'anteprima:
-«Entri in un luogo che non conosci. Nulla ti appartiene ancora, ma qualcosa potrebbe farti sentire a casa.»
-[PROVVISORIO] Domanda: «Qual è il tuo primo gesto?»
-[PROVVISORIO] Risposte-esempio: «Osservo ciò che mi circonda.» / «Cerco un angolo in cui fermarmi.» / «Mi avvicino a chi mi accoglie.»
-[PROVVISORIO] Feedback-esempio, rispettivamente:
-- «A volte, per sentirci parte di un luogo, abbiamo prima bisogno di imparare a conoscerlo.»
-- «Forse una casa comincia dove possiamo finalmente fermarci, senza dover andare altrove.»
-- «A volte non è lo spazio a farci sentire accolti, ma la presenza di qualcuno.»
-Nessuna delle risposte o dei feedback sopra è stata approvata come testo di pubblicazione.
-
-FASE 2 — RITORNARE A KITCHEN
-[APPROVATA] Meccanismo: il lettore collega la propria esperienza simbolica al racconto già letto, prendendo posizione su uno spazio, un gesto o una presenza; possibilità di riflessione personale.
-[PROVVISORIO] Domanda di lavoro: «Ripensando alla parte di Kitchen appena letta, che cosa ti sembra possa trasformare uno spazio sconosciuto in un luogo in cui sentirsi accolti?»
-[PROVVISORIO] Prospettive: «Uno spazio» / «Un gesto» / «Una presenza».
-[PROVVISORIO] Campo di testo facoltativo presente nel prototipo; il contenuto di microinterfaccia è ancora da verificare.
-
-FASE 3 — USCIRE DALLA STANZA
-[APPROVATA CON RISERVA DI REVISIONE] TESTO COMPLETO CONCLUSIVO v1.1 (mantenere intatto fino a nuova decisione):
-
-Hai attraversato una stanza sconosciuta. Hai osservato, cercato un punto in cui fermarti o una presenza a cui avvicinarti.
-
-Non esisteva una scelta giusta. Ogni gesto era un modo diverso di incontrare ciò che non conoscevi.
-
-La stanza è rimasta la stessa. Forse, però, è cambiato il modo in cui la guardi.
-
-Perché entrare in un luogo non significa necessariamente sentirsi parte di esso.
-
-[APPROVATA] Non inserire qui la domanda centrale di APORIA. Non aggiungere una spiegazione conclusiva scolastica.
-[APPROVATA] Completata questa attività, si sblocca la successiva.
-[PROVVISORIO] Etichetta di completamento dell'Attività 01 e visualizzazione delle risposte nell'anteprima HTML.
-
-ATTIVITÀ 02 — IL CONFINE INVISIBILE
-[APPROVATA] Obiettivo: rileggere la parte di Kitchen già letta attraverso il rapporto fra estraneità e appartenenza; tessere tratte dal proprio sguardo sul testo, non assegnate dal sistema.
-
-FASE 1 — CREARE LE TESSERE
-[APPROVATA] TESTO DELLA CONSEGNA, soluzione B accettata:
-«Ripensa alla parte di Kitchen che hai letto. Quali gesti, incontri, luoghi o dettagli ti sembrano significativi per comprendere il senso di appartenenza?
-
-Scegli liberamente gli elementi che ti hanno colpito e crea le tue tessere.»
-[APPROVATA] Ogni tessera contiene un dettaglio, gesto, incontro o luogo individuato dal lettore. Due tessere obbligatorie, terza facoltativa; non presentare esempi precompilati o indizi obbligatori.
-[PROVVISORIO] Campi di scrittura, limiti caratteri, pulsanti di aggiunta/rimozione e relative etichette.
-
-FASE 2 — COSTRUIRE LA LINEA
-[APPROVATA] Visualizzazione B «Linea del confine».
-[APPROVATA] Posizioni possibili e fissate: ESTRANEITÀ, SULLA SOGLIA, APPARTENENZA.
-[APPROVATA] Selezionare una tessera/posizione: non trascinarla; non collocarla in punti intermedi. La tessera compare nella posizione selezionata.
-[APPROVATA] Motivazione della posizione FACOLTATIVA per ogni tessera.
-[PROVVISORIO] Etichette dei comandi, rappresentazione CSS precisa, schede tessera, dettagli responsivi.
-
-FASE 3 — CAMBIARE PROSPETTIVA E CONCLUDERE
-[APPROVATA] Domanda conclusiva scelta per questa attività:
-«E se osservassi questi stessi momenti da un'altra prospettiva?
-
-Cambieresti la posizione di qualche tessera? Perché?»
-[APPROVATA] Il lettore può spostare una o più tessere a un'altra delle tre posizioni, oppure mantenere la sistemazione iniziale.
-[APPROVATA] Campo di riflessione finale FACOLTATIVO: spiegare perché si è cambiata o mantenuta l'interpretazione.
-[APPROVATA] Nessun punteggio, nessuna soluzione unica, nessuna quarta fase con un testo morale/filosofico finale.
-[APPROVATA] Comando di completamento ESPLICITO: «CONCLUDI L'ATTIVITÀ».
-[APPROVATA] Dopo il comando, tessere e scritti restano salvati e CONSULTABILI IN SOLA LETTURA.
-
-COMPLETAMENTO TAPPA 01
-[APPROVATA] Condizione congiunta: lettura confermata + Attività 01 completata + Attività 02 completata.
-[APPROVATA] Nessun comando «COMPLETA LA TAPPA»: completamento della tappa AUTOMATICO quando i tre requisiti risultano soddisfatti.
-[APPROVATA] La Tappa 02 sarà sbloccabile a requisiti conclusi, fermo restando che non è ancora implementata/pubblicabile.
-[APPROVATA] La domanda APORIA «CHE COSA RENDE UN LUOGO, O UNA PERSONA, CASA?» si mantiene per la conclusione dell'INTERO itinerario, non per la Tappa 01.
-[APPROVATA] Nessun timbro assegnato per il completamento della sola Tappa 01.
-[PROVVISORIO] Copy di conferma del completamento, etichette di navigazione e messaggi operativi di errore.
-
-
-========================================================================
-ORIGINE MODULO: 03_APORIA_KITCHEN_SPECIFICHE_INTEGRAZIONE_v1.0.txt
-========================================================================
-
-03 — SPECIFICHE DI INTEGRAZIONE PER LA CHAT CENTRALE / CHI GESTISCE IL SITO
-
-SCOPO E VINCOLO PRINCIPALE
-Queste sono SPECIFICHE DI TRASFERIMENTO, non un file di codice e NON un'autorizzazione a pubblicare. Quando la Tappa 01 sarà verificata e verrà richiesta esplicitamente l'integrazione, intervenire SOLTANTO nelle parti pertinenti al percorso di Kitchen, applicando le decisioni registrate.
-NON sostituire l'intero sito con l'anteprima. NON alterare HOME, I LIBRI, ITINERARI generali, agenda, altre opere, passaporto, navigazione, timbro, copertina o altri contenuti approvati.
-NON modificare font, colori, corpi, lettere maiuscole, proporzioni, spaziature, margini o CSS approvato. Usare il file grafico ufficiale disponibile alla chat centrale come base vincolante, non la presentazione della demo o questi TXT.
-
-PUNTI DI INNESTO CONCETTUALI (NON MODIFICHE ESEGUITE)
-- Itinerario Kitchen: presentazione della porzione di lettura della Tappa 01 con riserva, senza numeri di pagina inventati.
-- Tappa 01: conferma lettura + due attività in sequenza.
-- Attività 01: tre momenti, con scelte e feedback orientati all'interpretazione.
-- Attività 02: composizione di 2/3 tessere, assegnazione a tre punti della linea, revisione finale.
-- Atlante: aggiornamento stato Tappa 01, sblocco della Tappa 02 SOLO una volta verificati i requisiti. Evitare spoiler di tappe bloccate.
-- Passaporto: NON sbloccare il timbro per questa tappa. Non aggiungere azioni fittizie di attribuzione.
-
-STATI FUNZIONALI RICHIESTI
-L = conferma esplicita lettura; A1 = conclusione Attività 01; A2 = conclusione Attività 02.
-- Se L è falso: non avviare le attività.
-- Se L è vero e A1 è falso: A1 disponibile, A2 bloccata.
-- Se L e A1 veri e A2 falso: A2 disponibile.
-- Se L, A1 e A2 veri: Tappa 01 completata AUTOMATICAMENTE.
-- Sblocco Tappa 02: dipendente dal completamento Tappa 01, soltanto quando struttura della Tappa 02 e gate editoriali saranno approvati e implementati.
-- Ripresa del percorso senza perdere lo stato salvato.
-- Conclusione A2 obbligatoriamente esplicita tramite «CONCLUDI L'ATTIVITÀ»; tessere e riflessioni poi non modificabili.
-- Non predisporre bypass che facciano risultare la Tappa 01 conclusa prima dei tre requisiti.
-
-MODELLO LOGICO DATI (DESCRITTIVO, NON SCHEMA APPROVATO)
-- bookId = 001 / kitchen; stageId = 01;
-- readingConfirmed: boolean;
-- activity01: selectedFirstChoice, selectedPerspective, optionalReflection, completed;
-- activity02: tiles[2..3] (testo libero, posizione iniziale, posizione finale, motivazione facoltativa), optionalFinalReflection, completed;
-- stageCompleted: derivato da readingConfirmed AND activity01.completed AND activity02.completed.
-Questa struttura è una PROPOSTA tecnica di rappresentazione: nomi, limiti caratteri, versionamento dello storage e migrazione restano DA CHIARIRE. Non assumere che il modello coincida con il backend/sito reale.
-
-PERSISTENZA E SICUREZZA
-[APPROVATA] Prima fase senza account, salvataggio locale nel browser, compatibile con quanto previsto per il passaporto.
-[PROPOSTA TECNICA] Isolare i dati di Kitchen dai dati del passaporto e dalle altre sezioni, gestendo errori di quota/storage e assenza di supporto. Non inviare il testo libero delle tessere a servizi esterni senza nuova decisione esplicita.
-[PROVVISORIO] L'anteprima HTML usa la chiave locale di TEST «aporia.preview.kitchen.tappa01.v1». Non riutilizzarla ciecamente come chiave di PRODUZIONE e non interpretare i dati della demo come dati del sito.
-[PROPOSTA TECNICA] In futuro valutare come gestire eventuali rettifiche e reset, senza intaccare le risposte archiviate o i timbri; non inserire un pulsante di reset permanente senza approvazione.
-
-INTERFACCIA E ACCESSIBILITÀ
-[APPROVATA] Linea del confine con tre posizioni discrete; input tramite selezione, non drag-and-drop.
-[APPROVATA] Il lettore crea le tessere, senza suggerimenti narrativi precompilati.
-[PROPOSTA TECNICA] Usare etichette accessibili, operabilità con tastiera e smartphone, comunicazione chiara di errori, stati e completamento; verificare lettura delle tre posizioni con screen reader; evitare perdita di contenuti su back/reload.
-[DA CHIARIRE] Composizione grafica finale su desktop/mobile; questo file non autorizza aggiunte decorative, cambi CSS globali o ridisegni grafici.
-
-CONTENUTI NON DA TRAPIANTARE AUTOMATICAMENTE DALL'ANTEPRIMA
-- Stili aggiuntivi nel prototipo, percorsi hash e script dimostrativi.
-- Copie ridondanti della domanda centrale all'interno delle attività.
-- Etichette, istruzioni o feedback marcati PROVVISORIO.
-- Pulsante «AZZERA QUESTA ANTEPRIMA» e simulazioni di completamento.
-- Qualunque scelta di impaginazione o comportamento non confermata dall'autrice.
-
-PRECONDIZIONI ALL'INTEGRAZIONE / PUBBLICAZIONE
-1. Controllo lettura e confini sull'edizione Feltrinelli Liberitutti 2025.
-2. Approvazione del testo operativo finale della prima attività e delle microetichette.
-3. Revisione della conclusione A1 con riserva e verifica di ogni riferimento narrativo.
-4. Test accessibilità, mobile, salvataggio locale, ripresa e sola lettura.
-5. Test degli stati di sblocco, senza attribuzione impropria del timbro.
-6. Verifica di compatibilità con la versione grafica ufficiale più recente e con eventuali integrazioni già fatte nelle altre chat (es. agenda): non sovrascriverle.
-7. Approvazione esplicita dell'autrice «PRONTO PER PUBBLICAZIONE» e richiesta specifica di intervento sul sito.
-8. Solo dopo: implementazione autorizzata e verifica in ambiente reale.
-
-
-========================================================================
-ORIGINE MODULO: 04_APORIA_KITCHEN_CHECKLIST_TRASFERIMENTO_v1.0.txt
-========================================================================
-
-04 — CHECKLIST FINALE E MESSAGGIO DI TRASFERIMENTO
-
-CONTROLLO EDITORIALE
-[ ] Verificata la porzione della Tappa 01 sull'edizione Feltrinelli Liberitutti 2025.
-[ ] Individuata pagina/scena precisa di inizio e fine, senza spoiler successivi.
-[ ] Riletti dettagli, personaggi e suggerimenti alla luce della sola porzione assegnata.
-[ ] Testi provvisori A1, feedback e comandi sottoposti all'autrice.
-[ ] Conclusione A1 v1.1 riconfermata o revisionata con approvazione esplicita.
-[ ] La domanda centrale APORIA assente dalle due attività e dalla chiusura della Tappa 01.
-[ ] Verificata la distinzione tra domanda nella conclusione dell'itinerario e suo utilizzo preesistente nel dossier; nessuna modifica al dossier senza decisione separata.
-
-CONTROLLO GIOCHI
-[ ] Lettura confermata prima dell'Attività 01.
-[ ] Attività 01 sblocca Attività 02 e non richiede risposte giuste/sbagliate.
-[ ] Attività 02: due tessere obbligatorie, terza solo facoltativa.
-[ ] Nessuna tessera preimpostata; scrittura autonoma del lettore.
-[ ] Soltanto tre punti selezionabili: estraneità, soglia, appartenenza.
-[ ] Motivazione facoltativa per ciascuna tessera.
-[ ] Fase 3: cambiamento facoltativo e riflessione scritta facoltativa.
-[ ] «CONCLUDI L'ATTIVITÀ» salva e congela A2 in sola lettura.
-[ ] Completamento della Tappa 01 automatico SOLO con tre requisiti soddisfatti.
-[ ] La Tappa 02 non mostra attività bloccate e non svela spoiler.
-[ ] Il passaporto rimane senza timbro fino al completamento dell'intero itinerario.
-
-CONTROLLO TECNICO E GRAFICO
-[ ] Sito ufficiale conservato; niente sostituzione con file dimostrativo.
-[ ] Nessun cambio globale a font/colori/dimensioni/maiuscole/spaziature/timbro.
-[ ] Nessuna modifica accidentale a HOME, agenda, I LIBRI, altre sezioni.
-[ ] Tutti i dati del lettore ripresi correttamente dopo il reload.
-[ ] Le tessere finali A2 sono consultabili ma non modificabili.
-[ ] Le funzioni sono utilizzabili da tastiera e su smartphone.
-[ ] Test e verifica del consenso esplicito alla pubblicazione.
-
-STATO COMPLESSIVO (16/11/2026)
-APPROVATA: meccaniche e vincoli interattivi della Tappa 01, come da registro.
-APPROVATA CON RISERVA DI REVISIONE: confine narrativo; conclusione A1 v1.1.
-PROVVISORIO: titolo Tappa 01, microtesti, opzioni/feedback A1, impaginazione applicativa.
-DA CHIARIRE: pagine, verifiche anti-spoiler, test nel sito reale, completamento delle altre tappe.
-PRONTO PER PUBBLICAZIONE: NO.
-PUBBLICATO: NO.
-
-TESTO BREVE DA INCOLLARE NELLA CHAT CENTRALE
-«APORIA — LIBRO 001 — KITCHEN. Allego il pacchetto TXT v1.0 (16/11/2026) delle decisioni assunte per la Tappa 01. Chiedo di acquisirlo nel registro centrale come DOCUMENTAZIONE, non di integrare ora il sito. Sono approvate due attività: La stanza delle scelte e Il confine invisibile. Il confine narrativo e la conclusione della prima attività sono con riserva; testi e microcopy restano provvisori. Nessuna modifica alla grafica o alle altre sezioni è autorizzata. L'integrazione tecnica avverrà soltanto su mia nuova richiesta, dopo verifica editoriale e approvazione PRONTO PER PUBBLICAZIONE.»
+GATE APERTI
+- Verifica finale del confine di lettura, pagine e spoiler sull'edizione Feltrinelli Liberitutti 2025.
+- Revisione delle microistruzioni, opzioni e feedback provvisori della prima attività.
+- Revisione della conclusione A1 approvata con riserva.
+- Test finale in ambiente di prova, accessibilità e persistenza.
+- Autorizzazione esplicita PRONTO PER PUBBLICAZIONE.
